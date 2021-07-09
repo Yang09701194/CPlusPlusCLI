@@ -1,8 +1,6 @@
-#include "stdafx.h"
-
+#include <stdafx.h>
 #include "CPPCLIUtil.h"
 
-#include <vcclr.h>
 //#include "ExampleObj.h"
 
 //using namespace CSharpLibrary;
@@ -29,7 +27,7 @@ void oddNumberUpdate(Object^ obj, EventArgs^ args)
 	
 }
 
-EXAMPLE_OBJECT_DEC void example_print(char* message)
+CPPCLIUTIL_DEC void example_print(char* message)
 {
 	
 }
