@@ -3,7 +3,7 @@
 //#include <msclr\marshal_cppstd.h>
 
 //#include <vcclr.h>
-//#include <string>
+#include <string>
 
 #ifdef CPPCLIUTIL
 #define CPPCLIUTIL_DEC __declspec(dllexport)
@@ -30,7 +30,7 @@
 
 	//Define int returns from C# library here. Allows to easily decode them in
 	//Native C/C++	
-	CPPCLIUTIL_DEC char* UrlEncodeUtil(char* str); // returns int, defined above
+	CPPCLIUTIL_DEC std::string UrlEncodeUtil(char* str); // returns int, defined above
 	/*
 #ifdef __cplusplus
 }

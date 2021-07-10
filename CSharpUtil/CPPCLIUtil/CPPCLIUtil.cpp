@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include <vcclr.h>
-#include <string>
-//#include <msclr\marshal_cppstd.h>
+//#include <string>
+#include <msclr\marshal_cppstd.h>
 
 //#include <msclr/marshal.h>
 #include "CPPCLIUtil.h"
@@ -10,14 +10,14 @@
 //
 //using namespace CSharpUtil;
 //
-//using namespace System;
+using namespace System;
 //using namespace msclr::interop;
 
 //gcroot<Helper^> helperObject = gcnew Helper();
 
 //  C++/CLI Part 1
 //  https://www.youtube.com/watch?v=xTRTY-fOIe8
-CPPCLIUTIL_DEC char* UrlEncodeUtil(char* str)
+CPPCLIUTIL_DEC std::string UrlEncodeUtil(char* str)
 {
 	//String^ res =  helperObject->UrlEncodeUtil(gcnew String(str));
 
@@ -28,14 +28,15 @@ CPPCLIUTIL_DEC char* UrlEncodeUtil(char* str)
 	//std::string temp = marshal_as<std::string>(res);
 	//return temp;
 
-	/*std::string str2 = "Here";
+	std::string str2 = "Here";
 	String^ Str = gcnew String(str2.c_str());
 	String^ res  = System::Web::HttpUtility::UrlEncode(Str);
-*/
+
 	//https://stackoverflow.com/questions/12835924/export-c-function-from-a-c-cli-dll-that-uses-net-code
-	/*System::String^ result = "";
-	std::string unmanaged2 = msclr::interop::marshal_as<std::string>(result);
-	return unmanaged2;*/
+	//System::String^ result = "";
+	std::string unmanaged2 = msclr::interop::marshal_as<std::string>(res);
+	return unmanaged2;
+	//return &unmanaged2[0];
 
 	//System::Runtime::InteropServices::Marshal::StringToCoTaskMemUni("")
 
@@ -47,7 +48,7 @@ CPPCLIUTIL_DEC char* UrlEncodeUtil(char* str)
 	//// Probably bad
 	//char* ansiStr = strdup(strValueAsCString);
 
-	return "";
+	//return "";
 	
 
 }

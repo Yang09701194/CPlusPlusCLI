@@ -4,17 +4,25 @@
 #include "pch.h"
 
 #include "CPPCLIUtil.h"
+#include <string>
 
 //#include <msclr\marshal_cppstd.h>
 #include <iostream>
 
 int main()
 {
-	const char* str = "test";
-	char *cstr = new char[5];
-	strcpy_s(cstr, 5, str);
+	//const char* str = "test";
+	//char *cstr = new char[5];
+	//strcpy_s(cstr, 5, str);
+
+	std::string str = "test";
+	char *cstr = &str[0];
 	std::string res = UrlEncodeUtil(cstr);
-    //std::cout << "Hello World!\n"; 
+	//char* res = UrlEncodeUtil(cstr);
+	system("chcp 65001");
+
+	std::string s = std::string(res);
+    std::cout << s; 
 
 
 }
