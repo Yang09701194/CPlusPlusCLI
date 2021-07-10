@@ -6,8 +6,6 @@
 //#include <msclr/marshal.h>
 #include "CPPCLIUtil.h"
 //
-
-//
 //using namespace CSharpUtil;
 //
 using namespace System;
@@ -17,7 +15,7 @@ using namespace System;
 
 //  C++/CLI Part 1
 //  https://www.youtube.com/watch?v=xTRTY-fOIe8
-CPPCLIUTIL_DEC std::string UrlEncodeUtil(char* str)
+CPPCLIUTIL_DEC std::wstring UrlEncodeUtil(std::wstring str)
 {
 	//String^ res =  helperObject->UrlEncodeUtil(gcnew String(str));
 
@@ -28,13 +26,14 @@ CPPCLIUTIL_DEC std::string UrlEncodeUtil(char* str)
 	//std::string temp = marshal_as<std::string>(res);
 	//return temp;
 
-	std::string str2 = "Here";
+	std::wstring str2 = L"ด๚ธี";
 	String^ Str = gcnew String(str2.c_str());
 	String^ res  = System::Web::HttpUtility::UrlEncode(Str);
 
 	//https://stackoverflow.com/questions/12835924/export-c-function-from-a-c-cli-dll-that-uses-net-code
 	//System::String^ result = "";
-	std::string unmanaged2 = msclr::interop::marshal_as<std::string>(res);
+	//std::string unmanaged2 = msclr::interop::marshal_as<std::string>(res);
+	std::wstring unmanaged2 = msclr::interop::marshal_as<std::wstring>(res);
 	return unmanaged2;
 	//return &unmanaged2[0];
 

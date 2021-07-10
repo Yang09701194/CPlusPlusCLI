@@ -15,14 +15,17 @@ int main()
 	//char *cstr = new char[5];
 	//strcpy_s(cstr, 5, str);
 
-	std::string str = "test";
+	/*std::string str = "test";
 	char *cstr = &str[0];
-	std::string res = UrlEncodeUtil(cstr);
+	std::string res = UrlEncodeUtil(cstr);*/
 	//char* res = UrlEncodeUtil(cstr);
 	system("chcp 65001");
+	//std::cout << s;
 
-	std::string s = std::string(res);
-    std::cout << s; 
+	std::wstring str = L"ด๚ธี";
+	std::wstring res = UrlEncodeUtil(str);
+
+    std::wcout << res; 
 
 
 }

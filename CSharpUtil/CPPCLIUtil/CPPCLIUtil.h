@@ -30,7 +30,7 @@
 
 	//Define int returns from C# library here. Allows to easily decode them in
 	//Native C/C++	
-	CPPCLIUTIL_DEC std::string UrlEncodeUtil(char* str); // returns int, defined above
+	CPPCLIUTIL_DEC std::wstring UrlEncodeUtil(std::wstring str); // returns int, defined above
 	
 //#ifdef __cplusplus
 //}
