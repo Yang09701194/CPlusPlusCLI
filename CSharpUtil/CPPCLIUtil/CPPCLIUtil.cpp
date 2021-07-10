@@ -26,8 +26,8 @@ CPPCLIUTIL_DEC std::wstring UrlEncodeUtil(std::wstring str)
 	//std::string temp = marshal_as<std::string>(res);
 	//return temp;
 
-	std::wstring str2 = L"ด๚ธี";
-	String^ Str = gcnew String(str2.c_str());
+	//std::wstring str2 = L"ด๚ธี";
+	String^ Str = gcnew String(str.c_str());
 	String^ res  = System::Web::HttpUtility::UrlEncode(Str);
 
 	//https://stackoverflow.com/questions/12835924/export-c-function-from-a-c-cli-dll-that-uses-net-code

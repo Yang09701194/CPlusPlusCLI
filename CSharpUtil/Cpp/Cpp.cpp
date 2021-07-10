@@ -22,7 +22,7 @@ int main()
 	system("chcp 65001");
 	//std::cout << s;
 
-	std::wstring str = L"´ú¸Õ";
+	std::wstring str = L"¸ê®Æ";
 	std::wstring res = UrlEncodeUtil(str);
 
     std::wcout << res; 
