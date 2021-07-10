@@ -14,10 +14,10 @@
 #ifndef CPPCLIUTIL_H
 #define CPPCLIUTIL_H
 
-//#ifdef __cplusplus
-//extern "C"
-//{
-//#endif
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 	//CPPCLIUTIL_DEC typedef struct ExampleStruct
 	//{
@@ -32,9 +32,9 @@
 	//Native C/C++	
 	CPPCLIUTIL_DEC char* UrlEncodeUtil(char* str); // returns int, defined above
 	
-//#ifdef __cplusplus
-//}
-//#endif
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 

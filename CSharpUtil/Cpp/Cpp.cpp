@@ -2,19 +2,19 @@
 //
 
 #include "pch.h"
-#include <string>
-#include <iostream>
-#include <CPPCLIUtil.h>
 
-using namespace std;
+#include "CPPCLIUtil.h"
+
+//#include <msclr\marshal_cppstd.h>
+#include <iostream>
 
 int main()
 {
-	string t = "+++";
-
-	
-
-    std::cout << "Hello World!\n"; 
+	const char* str = "test";
+	char *cstr = new char[5];
+	strcpy_s(cstr, 5, str);
+	std::string res = UrlEncodeUtil(cstr);
+    //std::cout << "Hello World!\n"; 
 
 
 }

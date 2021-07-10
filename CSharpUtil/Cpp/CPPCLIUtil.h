@@ -18,7 +18,7 @@
 //extern "C"
 //{
 //#endif
-
+//
 	//CPPCLIUTIL_DEC typedef struct ExampleStruct
 	//{
 	//	ExampleStruct() //default initializer
@@ -31,10 +31,10 @@
 	//Define int returns from C# library here. Allows to easily decode them in
 	//Native C/C++	
 	CPPCLIUTIL_DEC char* UrlEncodeUtil(char* str); // returns int, defined above
-	
-//#ifdef __cplusplus
-//}
-//#endif
+	/*
+#ifdef __cplusplus
+}
+#endif*/
 
 #endif
 
